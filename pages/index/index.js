@@ -75,7 +75,6 @@ Page({
     if(heng) return (num > 0) ? 'right' : 'left';
     return (num > 0) ? 'bottom' : 'top';
   },
-
   mergeAll: function(dir){
     this.checkGame();
     switch(dir){
@@ -94,25 +93,18 @@ Page({
       default:
     }
   },
-
-  //左划
   mergeleft: function(){
     var change = false;
     var arr = this.data.numbers;
-    
     for(var i = 0; i < 4; i++){
-      //merge first
       for(var j = 0; j < 3; j++){
         if(arr[i][j] == 0) continue;
         for(var k = 1; k < 4-j; k++){
           if(arr[i][j] != 0 && arr[i][j+k] != 0){
-            if(arr[i][j] != arr[i][j+k]) break;   //不相同则直接跳过
+            if(arr[i][j] != arr[i][j+k]) break;
             arr[i][j] = arr[i][j] *2;
             arr[i][j+k] = 0;
             change = true;
-            // this.setData({
-            // score: this.data.score + arr[i][j]/2
-            // })
             if(this.data.score < arr[i][j]){
               this.setData({score:arr[i][j]})
             }
@@ -120,7 +112,6 @@ Page({
           }
         }
       }
-      //movemove
       for(var j = 0; j < 3; j++){
         if(arr[i][j] == 0){
           for(var k = 1; k < 4-j; k++){
@@ -140,13 +131,10 @@ Page({
     this.storeScore()
     return change
   },
-  //右滑
   mergeright: function(){
     var change = false
     var arr = this.data.numbers;
-    
     for(var i = 0; i < 4; i++){
-      //merge first
       for(var j = 3; j > 0; j--){
         if(arr[i][j] == 0) continue;
         for(var k = 1; k <= j; k++){
@@ -155,9 +143,6 @@ Page({
             arr[i][j] = arr[i][j] *2;
             arr[i][j-k] = 0;
             change = true;
-            // this.setData({
-            // score: this.data.score + arr[i][j]/2
-            // })
             if(this.data.score < arr[i][j]){
               this.setData({score:arr[i][j]})
             }
@@ -165,7 +150,6 @@ Page({
           }
         }
       }
-      //movemove
       for(var j = 3; j > 0; j--){
         if(arr[i][j] == 0){
           for(var k = 1; k <= j; k++){
@@ -185,13 +169,10 @@ Page({
     this.storeScore()
     return change
   },
-  //下划
   mergebottom: function(){
     var change = false
     var arr = this.data.numbers;
-    
     for(var i = 0; i < 4; i++){
-      //merge first
       for(var j = 3; j > 0; j--){
         if(arr[j][i] == 0) continue;
         for(var k = 1; k <= j; k++){
@@ -200,9 +181,6 @@ Page({
             arr[j][i] = arr[j][i] *2;
             arr[j-k][i] = 0;
             change = true
-            // this.setData({
-            // score: this.data.score + arr[j][i]/2
-            // })
             if(this.data.score < arr[j][i]){
               this.setData({score:arr[j][i]})
             }
@@ -210,7 +188,6 @@ Page({
           }
         }
       }
-      //movemove
       for(var j = 3; j > 0; j--){
         if(arr[j][i] == 0){
           for(var k = 1; k <= j; k++){
@@ -230,13 +207,10 @@ Page({
     this.storeScore()
     return change
   },
-  //上滑
   mergetop: function(){
     var change = false
     var arr = this.data.numbers;
-    
     for(var i = 0; i < 4; i++){
-      //merge first
       for(var j = 0; j < 3; j++){
         if(arr[j][i] == 0) continue;
         for(var k = 1; k < 4-j; k++){
@@ -245,9 +219,6 @@ Page({
             arr[j][i] = arr[j][i] *2;
             arr[j+k][i] = 0;
             change = true
-            // this.setData({
-            // score: this.data.score + arr[j][i]/2
-            // })
             if(this.data.score < arr[j][i]){
               this.setData({score:arr[j][i]})
             }
@@ -255,7 +226,6 @@ Page({
           }
         }
       }
-      //movemove
       for(var j = 0; j < 3; j++){
         if(arr[j][i] == 0){
           for(var k = 1; k < 4-j; k++){
@@ -275,7 +245,6 @@ Page({
     this.storeScore()
     return change
   },
-  //随机插入
   randInsert: function(){
     var arr = this.data.numbers
     var num = Math.random() < 0.8 ? 2 : 4
@@ -305,7 +274,6 @@ Page({
         if(arr[i][j] == arr[i+1][j] || arr[i][j] == arr[i][j+1]) 
           return;
     }
-        
     for(var j = 0; j < 3; j++) {
       if(arr[3][j] == arr[3][j+1]) return;
       if(arr[j][3] == arr[j+1][3]) return;
