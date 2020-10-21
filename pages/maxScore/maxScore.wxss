@@ -1,0 +1,23 @@
+.title {
+  flex:1;
+  height: 150rpx;
+  line-height: 150rpx;
+  background:#eec22e;
+  margin: 80rpx 20rpx 40rpx 40rpx;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 10rpx;
+}
+
+.score {
+  flex:1;
+  height: 150rpx;
+  line-height: 150rpx;
+  margin: 80rpx 20rpx 40rpx 40rpx;
+  text-align: center;
+  font-size: 5rem;
+  color: #FFA500;
+}
+
+

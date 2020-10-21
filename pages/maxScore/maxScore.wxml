@@ -1,0 +1,2 @@
+<view class = "title">最高分</view>
+<view class = "score">{{maxscore}}</view>
