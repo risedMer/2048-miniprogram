@@ -1,0 +1,31 @@
+.title {
+  flex:1;
+  height: 150rpx;
+  line-height: 150rpx;
+  background:#eec22e;
+  margin: 80rpx 20rpx 40rpx 40rpx;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 10rpx;
+}
+
+.btnContain {
+  height: 152rpx;
+  width: 152rpx;
+  margin: 6rpx 6rpx;
+  line-height: 152rpx;
+  text-align: center;
+  font-size: 60rpx;
+  color: #fff7eb;
+  }
+
+.btn {
+  width: 550rpx;
+  height: 150rpx;
+  text-align: center; 
+  font-weight: bolder;
+  font-size: 60rpx;
+  margin-left: 100rpx;
+  margin-top: 40rpx;
+}

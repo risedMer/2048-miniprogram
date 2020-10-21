@@ -1,0 +1,8 @@
+<view class = "title">
+  <text>Mer's 2048</text>
+</view>
+<view class = "btnContain">
+  <button class = "btn" bindtap = "start">开始游戏</button>
+  <button class = "btn" bindtap = "maxScore">最高分</button>
+  <button class = "btn" bindtap = "about">关于</button>
+</view>
