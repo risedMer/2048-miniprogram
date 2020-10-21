@@ -1,0 +1,13 @@
+<view class = "container">
+  <view class = "about">
+    <text>产品名称：Mer's 2048</text>
+    <text>版本号：1.0.0</text>
+  <text>开发时间：2020年10月</text>
+  </view>
+  <view class = "about aboutme">
+    <text class = "title">作者：小梅(Mer)</text>
+    <text>邮箱：31801120@stu.zucc.edu.cn</text>
+    <text class = "title">博客：https://www.cnblogs.com/4years/</text>
+    <text>GitHub：https://github.com/risedMer</text>
+  </view>
+</view>
