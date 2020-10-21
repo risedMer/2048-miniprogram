@@ -13,5 +13,5 @@
   </view>
 </view>
 <modal class = "modal" hidden = "{{modalHidden}}" bindconfirm = "modalChange" bindcancel = "modalCancle">
-  <view>游戏结束</view>
+  <view>游戏结束,本局最高得分：{{score}}</view>
 </modal>

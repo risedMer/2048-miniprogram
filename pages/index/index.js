@@ -174,7 +174,8 @@ Page({
     var arr = this.data.numbers;
     for(var i = 0; i < 4; i++){
       for(var j = 3; j > 0; j--){
-        if(arr[j][i] == 0) continue;
+        if(arr[j][i] == 0) 
+          continue;
         for(var k = 1; k <= j; k++){
           if(arr[j][i] != 0 && arr[j-k][i] != 0){
             if(arr[j][i] != arr[j-k][i]) break;
@@ -266,7 +267,8 @@ Page({
     var arr = this.data.numbers
     for(var i = 0; i < 4; i++){
       for(var j = 0; j < 4; j++){
-        if(arr[i][j] == 0) return;
+        if(arr[i][j] == 0) 
+          return;
       }
     }
     for(var i = 0; i < 3; i++){
@@ -275,8 +277,10 @@ Page({
           return;
     }
     for(var j = 0; j < 3; j++) {
-      if(arr[3][j] == arr[3][j+1]) return;
-      if(arr[j][3] == arr[j+1][3]) return;
+      if(arr[3][j] == arr[3][j+1]) 
+        return;
+      if(arr[j][3] == arr[j+1][3]) 
+        return;
     }
     this.setData({
       modalHidden: false,
