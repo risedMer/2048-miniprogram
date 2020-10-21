@@ -1,11 +1,15 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/start/start",
+    "pages/index/index",
+    "pages/maxScore/maxScore",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "Mer's 2048",
     "enablePullDownRefresh": false
-  }
+  },
+  "sitemapLocation": "sitemap36.json"
 }
